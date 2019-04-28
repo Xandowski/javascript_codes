@@ -147,9 +147,6 @@ deve conter no retorno da frase acima é "metro" no lugar de "metros".
 método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
-
-
-// Agora, apresente-se ;)
 pessoa.apresentação = () => {
     let metrosCaminhados = 'metros'
     let idade = 'anos';
@@ -168,4 +165,6 @@ pessoa.apresentação = () => {
     + 'meu peso é ' + pessoa.peso + 'Kg e, só hoje eu ja caminhei '
     + pessoa.caminhouQuantosMetros + ' ' + metrosCaminhados;
 };
+
+// Agora, apresente-se ;)
 console.log(pessoa.apresentação());
