@@ -20,7 +20,7 @@ console.log(soma); //72;
 const souninja = true;
 
 // Declare uma variável chamada `comida` que recebe um array com os valores 'arroz', 'feijão' e 'ovo'.
-const comida = ['arroz', 'feijão', 'ovo'];
+const comida = ['arroz', 'feijão', 'carne'];
 
 // Digite a instrução que imprime o valor de 'feijao', que está na variável `comida`.
 console.log(comida[1]);
