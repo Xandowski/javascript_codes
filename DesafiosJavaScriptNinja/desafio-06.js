@@ -13,7 +13,6 @@ estar na ordem em que eles aparecem na tabela no momento da solução desse
 desafio.
 */
 const teams = ['Ferroviária', 'RB Brasil', 'Mirassol', 'Ponte Preta', 'Oeste'];
-
 console.log('Times que estão participando do campeonato:', teams);
 
 /*
