@@ -1,5 +1,7 @@
 function checkCashRegister(price, cash, cid) {
   let change = cash - price;
+  change = change.toPrecision(2);
+
   let changeArr = [];
   const dime = 0.10;
   const quarter = 0.25;
@@ -13,15 +15,23 @@ function checkCashRegister(price, cash, cid) {
   } else {
     if(change < 1){
       for(let i = 3; i >= 0; i--){
-        if(change < cid[i][1] && change >= quarter){
-          if(change % quarter == 0) {
+        if(change >= quarter){
+          if(change % quarter == 0 && change <= cid[i][1]) {
             changeArr.push(["QUARTER", change]);
             return {status: "OPEN", change: changeArr}
           }
-          else {
-            const newChange = parseInt(change/quarter) * 0.25;
+          else if (change % quarter == 0 && change > cid[i][1] && cid[i][1] != 0){
+            changeArr.push(["QUARTER", cid[i][1]]);
+            change = change - cid[i][1];
+          }
+          else if (change < cid[i][1]) {
+            const newChange = (parseInt(change/quarter) * quarter).toPrecision(2);
             changeArr.push(["QUARTER", newChange]);
-            change = change - newChange;
+            change = (change - newChange).toPrecision(2);
+          }
+          else {
+            changeArr.push(["QUARTER", cid[i][1]]);
+            change = change - cid[i][1];
           }
         }
         else if(change >= dime) {
@@ -32,22 +42,19 @@ function checkCashRegister(price, cash, cid) {
           else if(change % dime == 0 && change > cid[i][1] && cid[i][1] != 0) {
             changeArr.push(["DIME", cid[i][1]]);
             change = change - cid[i][1];
-            return {status: "OPEN", change: changeArr}
           }
-          else if( change <= cid[i][1]) {
-            const newChange = parseInt(change/dime) * 0.10;
+          else if( change < cid[i][1]) {
+            const newChange = parseInt(change/dime) * dime;
             changeArr.push(["DIME", newChange]);
             change = change - newChange;
           }
           else {
-            const newChange = parseInt(change/dime) * 0.10;
-            if(newChange > cid[i][1]) {
-              changeArr.push(["DIME", newChange - cid[i][1]]);
-              change = change - (cid[i][1] - newChange);
-            }
+            changeArr.push(["DIME", cid[i][1]]);
+            change = change - cid[i][1];
           }
         }
       }
+      return {status: "OPEN", change: changeArr}
 
     }else{
     }
