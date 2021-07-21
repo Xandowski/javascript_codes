@@ -1,11 +1,31 @@
-# Repositório de estudos sobre JavaScript
+# Repository for practicing JavaScript
+
 <div align="center">
-  <img src="https://i.imgur.com/ds3psAK.png" width="120">
+
+![jsicon](https://i.imgur.com/ZQn9oiw.png)
+
 </div>
 
+<div align="center">
 
-  ## Neste repositório irá conter:
+[<img src="https://i.imgur.com/ofOpqNA.png" width="120">](https://www.freecodecamp.org)
 
-* Exercícios do [freeCodeCamp](https://www.freecodecamp.org/learn/) da certificação de algoritmos e estrutura de dados;
-* Exercícios do curso JavaScriptNinja;
-* Exercícios do curso de JavaScript e TypeScript do básico ao avançado 2020.
+[<img src="https://i.imgur.com/dPVcZJS.png" width="110">](https://digitalinnovation.one/)
+
+[<img src="https://i.imgur.com/CWjKKY8.png">](https://www.udemy.com/)
+
+</div>
+
+## Exercises from Freecodecamp Certification
+
+- [JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/) certification.
+
+## Exercises from udemy courses:
+
+- [Desafios JavaScript Ninja](https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/).
+- [JavaScript Básico ao Avançado](https://www.udemy.com/course/curso-javascript-ninja/).
+
+## And some challenges from others sites:
+
+- [HackerRank](https://www.hackerrank.com/dashboard).
+- [Digital Innovation One](https://web.digitalinnovation.one/)
